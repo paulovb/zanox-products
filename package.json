@@ -1,6 +1,6 @@
 {
   "name": "zanox-products",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,21 @@
     "currency-symbol-map": "^1.2.0",
     "JSONPath": "^0.10.0",
     "accounting": "^0.3.2"
+  },
+  "keywords": [
+    "zanox",
+    "products",
+    "offers",
+    "sales",
+    "affiliate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulovb/zanox-products.git"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/paulovb/zanox-products/issues"
   },
   "_id": "zanox-products@0.0.2"
 }

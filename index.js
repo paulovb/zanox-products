@@ -121,13 +121,16 @@ Zanox.prototype.done = function (cb) {
 };
 
 var format = function (products) {
+    
+//console.log(JSON.stringify(products));
+    
   return products.map(function (p) {
     var name = p.name,
         price = p.price,
         currency = p.currency,
         description = p.description || '',
-        image = p.image.large || p.image.small || p.image.medium || null,
-        store = p.merchantCategory,
+        image = images(p.image) || '',
+        store = p.program['$'],
         link = links(p.trackingLinks);
 
     if (!price || !name || !link) return null;
@@ -150,4 +153,20 @@ var format = function (products) {
 var links = function (links) {
   if (!links) return null;
   return links.trackingLink[0].ppc || null;
+};
+
+var images = function (images) {
+  if (!images) return null;
+  
+    var image = "";
+    
+    if (_.extend({},images).hasOwnProperty('large')) {
+        image = images.large;
+    } else if (_.extend({},images).hasOwnProperty('small')) {
+        image = images.small;
+    } else if (_.extend({},images).hasOwnProperty('medium')) {
+        image = images.medium;
+    }
+        
+    return image;
 };
