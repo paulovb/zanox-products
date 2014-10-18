@@ -127,6 +127,7 @@ var format = function (products) {
         currency = p.currency,
         description = p.description || '',
         image = p.image.large || p.image.small || p.image.medium || null,
+        store = p.merchantCategory,
         link = links(p.trackingLinks);
 
     if (!price || !name || !link) return null;
@@ -138,7 +139,8 @@ var format = function (products) {
       url: link,
       price: price,
       currency: currency,
-      image: image
+      image: image,
+      store: store
     }
   }).filter(function (p) {
     return p;
