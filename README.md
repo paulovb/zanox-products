@@ -26,4 +26,4 @@ zanox({keywords: 'search...'})
 ## LICENSE
 
 The MIT License (MIT)
-Copyright (c) 2014 Paulo Vítor Bischof, Based on the "zanox-products" of Adam Rudd.
+Copyright (c) 2014 Paulo Vítor Bischof, Based on the "zanox-lookup" of Adam Rudd.
